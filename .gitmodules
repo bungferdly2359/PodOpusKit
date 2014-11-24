@@ -1,0 +1,3 @@
+[submodule "OpusKit"]
+	path = OpusKit
+	url = https://github.com/chrisballinger/OpusKit
