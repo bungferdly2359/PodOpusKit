@@ -9,8 +9,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform     = :ios, "6.0"
   s.preserve_paths = 'README*'
-  s.default_subspec = 'Core'
-  s.frameworks = 'AVFoundation'
 
   s.subspec 'Core' do |core|
     core.source_files = 'OpusKit/OpusKit/*.{h,m}'
