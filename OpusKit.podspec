@@ -9,19 +9,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform     = :ios, "6.0"
   s.preserve_paths = 'README*'
-  s.default_subspec = 'OpusKit'
 
-  s.subspec 'Core' do |core|
-    core.source_files = 'OpusLib/include/opus/*.h'
-    core.public_header_files = 'OpusLib/include/opus/*.h'
-    core.preserve_paths = 'OpusLib/lib/libopus.a'
-    core.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/OpusKit/OpusLib/lib' }
-  end
-
-  s.subspec 'OpusKit' do |opusKit|
-    opusKit.source_files = 'OpusKit/*.{h,m}'
-    opusKit.public_header_files = 'OpusKit/*.h'   
-    opusKit.dependency 'OpusKit/Core'
-  end
+  s.source_files = 'OpusLib/include/opus/*.h', 'OpusKit/*.{h,m}'
+  s.public_header_files = 'OpusLib/include/opus/*.h' , 'OpusKit/*.h'
+  s.preserve_paths = 'OpusLib/lib/libopus.a'
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/OpusKit/OpusLib/lib' }
   
 end
