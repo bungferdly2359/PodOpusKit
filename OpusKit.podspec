@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files = 'OpusLib/include/opus/*.h'
+    core.public_header_files = 'OpusLib/include/opus/*.h'
     core.preserve_paths = 'OpusLib/lib/libopus.a'
     core.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/OpusKit/OpusLib/lib' }
   end
