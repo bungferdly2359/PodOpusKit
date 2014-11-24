@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.public_header_files = 'OpusLib/include/opus/*.h' , 'OpusKit/*.h'
   s.preserve_paths = 'OpusLib/lib/libopus.a'
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/OpusKit/OpusLib/lib' }
+  s.vendored_libraries = 'OpusLib/lib/libopus.a'
   
 end
